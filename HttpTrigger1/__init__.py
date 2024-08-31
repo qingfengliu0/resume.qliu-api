@@ -20,7 +20,7 @@ def main(req: func.HttpRequest, inputDocument: func.DocumentList, outputDocument
         outputDocument.set(current_document)
 
         # Return the updated visit count
-        return func.HttpResponse(new_visit_count, status_code=200)
+        return func.HttpResponse(str(new_visit_count), status_code=200)
 
     else:
         # If no document exists, create a new one with a visit count of 1
