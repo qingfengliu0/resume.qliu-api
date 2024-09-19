@@ -16,7 +16,7 @@
       "name": "inputDocument",
       "databaseName": "cosmos-sql-db-test",
       "containerName": "cosmos-sql-container-test",
-      "connection": "db_connectionstring",
+      "connection": "comsmos-container-connection",
       "sqlQuery": "SELECT * FROM c WHERE c.id = 'visit_counter'",
       "direction": "in"
     },
@@ -27,7 +27,7 @@
       "databaseName": "cosmos-sql-db-test",
       "containerName": "cosmos-sql-container-test",
       "createIfNotExists": "true",
-      "connection": "db_connectionstring"
+      "connection": "comsmos-container-connection"
     },
     {
       "type": "http",
