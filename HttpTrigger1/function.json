@@ -14,9 +14,9 @@
     {
       "type": "cosmosDB",
       "name": "inputDocument",
-      "databaseName": "recordvisitdb",
-      "containerName": "recordvisitcontainer",
-      "connection": "CosmosDBConnection",
+      "databaseName": "cosmos-sql-db-test",
+      "containerName": "cosmos-sql-container-test",
+      "connection": "db_connectionstring",
       "sqlQuery": "SELECT * FROM c WHERE c.id = 'visit_counter'",
       "direction": "in"
     },
@@ -24,10 +24,10 @@
       "type": "cosmosDB",
       "direction": "out",
       "name": "outputDocument",
-      "databaseName": "recordvisitdb",
-      "containerName": "recordvisitcontainer",
+      "databaseName": "cosmos-sql-db-test",
+      "containerName": "cosmos-sql-container-test",
       "createIfNotExists": "true",
-      "connection": "CosmosDBConnection"
+      "connection": "db_connectionstring"
     },
     {
       "type": "http",
