@@ -2,7 +2,7 @@ import logging
 import uuid
 import azure.functions as func
 
-
+#test
 def main(req: func.HttpRequest, inputDocument: func.DocumentList, outputDocument: func.Out[func.Document]) -> func.HttpResponse:
     logging.info('HTTP trigger function processed a request to track visit count.')
 
