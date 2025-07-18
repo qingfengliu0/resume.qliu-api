@@ -6,6 +6,8 @@ name: Build and deploy Python project to Azure Function App - func-recordvisit-p
 
 on:
   push:
+    paths:
+      - 'visitorcount-prod/**' 
     branches:
       - main
   workflow_dispatch:
