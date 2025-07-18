@@ -1,0 +1,38 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "cosmosDB",
+      "name": "inputDocument",
+      "databaseName": "cosmos-sql-db-test",
+      "containerName": "cosmos-sql-container-test",
+      "connection": "comsmos-container-connection",
+      "sqlQuery": "SELECT * FROM c WHERE c.id = 'visit_counter'",
+      "direction": "in"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "outputDocument",
+      "databaseName": "cosmos-sql-db-test",
+      "containerName": "cosmos-sql-container-test",
+      "createIfNotExists": "true",
+      "connection": "comsmos-container-connection"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    }
+  ]
+}
